@@ -66,3 +66,14 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 		echo "qualcommax set up nowifi successfully!"
 	fi
 fi
+
+echo "# CONFIG_PACKAGE_luci-app-gecoosac is not set" >> ./.config
+echo "# CONFIG_PACKAGE_luci-app-homeproxy is not set" >> ./.config
+echo "# CONFIG_PACKAGE_luci-app-package-manager is not set" >> ./.config
+echo "# CONFIG_PACKAGE_luci-app-partexp is not set" >> ./.config
+echo "# CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set" >> ./.config
+echo "# CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set" >> ./.config
+echo "# CONFIG_PACKAGE_luci-app-samba4 is not set" >> ./.config
+echo "# CONFIG_PACKAGE_luci-app-sqm is not set" >> ./.config
+echo "# CONFIG_PACKAGE_luci-app-tailscale is not set" >> ./.config
+echo "# CONFIG_PACKAGE_luci-app-wolplus is not set" >> ./.config
