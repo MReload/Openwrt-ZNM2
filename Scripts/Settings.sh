@@ -48,8 +48,8 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 	echo "CONFIG_FEED_nss_packages=n" >> ./.config
 	echo "CONFIG_FEED_sqm_scripts_nss=n" >> ./.config
 	#开启sqm-nss插件
-	echo "CONFIG_PACKAGE_luci-app-sqm=y" >> ./.config
-	echo "CONFIG_PACKAGE_sqm-scripts-nss=y" >> ./.config
+#	echo "CONFIG_PACKAGE_luci-app-sqm=y" >> ./.config
+#	echo "CONFIG_PACKAGE_sqm-scripts-nss=y" >> ./.config
 	#设置NSS版本
 	echo "CONFIG_NSS_FIRMWARE_VERSION_11_4=n" >> ./.config
 	if [[ "${WRT_CONFIG,,}" == *"ipq50"* ]]; then
@@ -64,13 +64,7 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 	fi
 fi
 
-echo "# CONFIG_PACKAGE_luci-app-gecoosac is not set" >> ./.config
-echo "# CONFIG_PACKAGE_luci-app-homeproxy is not set" >> ./.config
 echo "# CONFIG_PACKAGE_luci-app-package-manager is not set" >> ./.config
-echo "# CONFIG_PACKAGE_luci-app-partexp is not set" >> ./.config
 echo "# CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set" >> ./.config
 echo "# CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set" >> ./.config
-echo "# CONFIG_PACKAGE_luci-app-samba4 is not set" >> ./.config
-#echo "# CONFIG_PACKAGE_luci-app-sqm is not set" >> ./.config
-echo "# CONFIG_PACKAGE_luci-app-tailscale is not set" >> ./.config
-echo "# CONFIG_PACKAGE_luci-app-wolplus is not set" >> ./.config
+
