@@ -2,8 +2,6 @@
 
 #移除luci-app-attendedsysupgrade
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
-#修改默认主题
-sed -i "s/luci-theme-bootstrap/luci-theme-$WRT_THEME/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 #修改immortalwrt.lan关联IP
 sed -i "s/192\.168\.[0-9]*\.[0-9]*/$WRT_IP/g" $(find ./feeds/luci/modules/luci-mod-system/ -type f -name "flash.js")
 #添加编译日期标识
@@ -36,8 +34,7 @@ sed -i "s/hostname='.*'/hostname='$WRT_NAME'/g" $CFG_FILE
 #配置文件修改
 echo "CONFIG_PACKAGE_luci=y" >> ./.config
 echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
-echo "CONFIG_PACKAGE_luci-theme-$WRT_THEME=y" >> ./.config
-echo "CONFIG_PACKAGE_luci-app-$WRT_THEME-config=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-theme-bootstrap=y" >> ./.config
 
 #手动调整的插件
 if [ -n "$WRT_PACKAGE" ]; then
@@ -74,6 +71,6 @@ echo "# CONFIG_PACKAGE_luci-app-partexp is not set" >> ./.config
 echo "# CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set" >> ./.config
 echo "# CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set" >> ./.config
 echo "# CONFIG_PACKAGE_luci-app-samba4 is not set" >> ./.config
-echo "# CONFIG_PACKAGE_luci-app-sqm is not set" >> ./.config
+#echo "# CONFIG_PACKAGE_luci-app-sqm is not set" >> ./.config
 echo "# CONFIG_PACKAGE_luci-app-tailscale is not set" >> ./.config
 echo "# CONFIG_PACKAGE_luci-app-wolplus is not set" >> ./.config
